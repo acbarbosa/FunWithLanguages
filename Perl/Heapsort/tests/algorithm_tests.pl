@@ -11,9 +11,15 @@ use Test::Most;
 use HeapSort;
 
 
-subtest "ordenação de array vazio retorna array vazio" => sub {
+subtest "ordenação de array vazio" => sub {
     my @expected = ();
     my @actual = HeapSort::sort( () );
+    ok( is_deeply( \@actual, \@expected ) );
+};
+
+subtest "ordenação de array com um único elemento" => sub {
+    my @expected = (9);
+    my @actual = HeapSort::sort( (9) );
     ok( is_deeply( \@actual, \@expected ) );
 };
 

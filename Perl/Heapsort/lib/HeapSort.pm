@@ -4,8 +4,8 @@ use strict;
 use warnings;
 
 sub sort {
-    my @sorted = ();
-    return @sorted;
+    my @input = @_;
+    return @input;
 }
 
 return 1;
